@@ -128,6 +128,18 @@ header div hr {
     margin: 40px 0;
 }
 
+.input-section .choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.input-section .choice input {
+    margin: 5px 5px;
+    color: #EA85A6;
+}
+
 #city-input {
     padding: 10px 0;
     border: 1px solid white;

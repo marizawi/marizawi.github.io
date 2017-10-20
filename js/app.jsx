@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function(){
             super(props);
 
             this.state = {
-                cities: ["Paris", "Madrid", "Tokyo", "Washington, D.C.", "London", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Brasilia", "Phnom Penh", "Ottawa", "Havana", "Copenhagen", "Helsinki", "Berlin", "Reykjavik", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi", "Harare"],
+                citiesSea: ["Paris", "Tokyo", "Washington, D.C.", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Phnom Penh", "Havana", "Copenhagen", "Helsinki", "Reykjavik", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi"],
+                citiesMount: ["Madrid", "Tokyo", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Ottawa", "Jerusalem", "Rabat", "Lima"],
+                citiesBoth: ["Paris", "Madrid", "Tokyo", "Washington, D.C.", "London", "Rome", "Tirana", "Buenos Aires", "Canberra", "Brasilia", "Phnom Penh", "Ottawa", "Havana", "Copenhagen", "Helsinki", "Berlin", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi", "Harare"],
                 city: "",
                 visibility: true,
                 weather: false,
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 tab: false,
                 about: false,
                 text: true,
+                selectedRadio: "Sea",
             }
         }
 
@@ -35,8 +38,16 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         getRandCity() {
-            var rand = Math.floor(Math.random() * this.state.cities.length );
-            return this.state.cities[rand];
+            if (this.state.selectedRadio === "Sea") {
+                let randSea = Math.floor(Math.random() * this.state.citiesSea.length);
+                return this.state.citiesSea[randSea];
+            } else if (this.state.selectedRadio === "Mountains") {
+                let randMount = Math.floor(Math.random() * this.state.citiesMount.length);
+                return this.state.citiesMount[randMount];
+            } else {
+                let randBoth = Math.floor(Math.random() * this.state.citiesBoth.length);
+                return this.state.citiesBoth[randBoth];
+            }
         }
 
         handleClick = () => {
@@ -67,6 +78,12 @@ document.addEventListener('DOMContentLoaded', function(){
                 tab: "map",
             })
         }
+
+        handleRadioChange = (event) => {
+            this.setState({
+                selectedRadio: event.currentTarget.value,
+            })
+        };
 
         render() {
             const visibility = this.state.visibility ? "none" : "block";
@@ -117,6 +134,11 @@ document.addEventListener('DOMContentLoaded', function(){
                         <div className="input-section">
                             <div>
                             <input id="city-input" value={this.state.city} />
+                                <div className="choice">
+                                    <input type="radio" value="Sea" checked={this.state.selectedRadio === 'Sea'} onChange={this.handleRadioChange} /> Sea
+                                    <input type="radio" value="Mountains" checked={this.state.selectedRadio === 'Mountains'} onChange={this.handleRadioChange} /> Mount
+                                    <input type="radio" value="Nevermind" checked={this.state.selectedRadio === 'Nevermind'} onChange={this.handleRadioChange} /> Never mind
+                                </div>
                             <input className="city-button" onClick={this.handleClick} value="Click" type="submit" />
                             </div>
                             <div className="links" style={style}>
