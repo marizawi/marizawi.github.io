@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         componentDidMount() {
-            var apiWeatUrl = "http://api.openweathermap.org/data/2.5/weather?q="+this.props.city+"&units=metric&appid=1035af6c108ae667219e8190d9da9f4e"
+            var apiWeatUrl = "https://api.openweathermap.org/data/2.5/weather?q="+this.props.city+"&units=metric&appid=1035af6c108ae667219e8190d9da9f4e"
             $.ajax({
                 url: apiWeatUrl
             })
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         componentDidMount() {
-            var apiExUrl = "http://api.fixer.io/latest"
+            var apiExUrl = "https://api.fixer.io/latest"
             $.ajax({
                 url: apiExUrl
             })

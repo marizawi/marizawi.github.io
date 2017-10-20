@@ -14091,7 +14091,7 @@ document.addEventListener('DOMContentLoaded', function () {
             value: function componentDidMount() {
                 var _this5 = this;
 
-                var apiWeatUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + this.props.city + "&units=metric&appid=1035af6c108ae667219e8190d9da9f4e";
+                var apiWeatUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + this.props.city + "&units=metric&appid=1035af6c108ae667219e8190d9da9f4e";
                 $.ajax({
                     url: apiWeatUrl
                 }).done(function (response) {
@@ -14216,7 +14216,7 @@ document.addEventListener('DOMContentLoaded', function () {
             value: function componentDidMount() {
                 var _this9 = this;
 
-                var apiExUrl = "http://api.fixer.io/latest";
+                var apiExUrl = "https://api.fixer.io/latest";
                 $.ajax({
                     url: apiExUrl
                 }).done(function (response) {
