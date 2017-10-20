@@ -13812,12 +13812,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             _react2.default.createElement(
                                 'a',
                                 { href: 'https://github.com/marizawi' },
-                                _react2.default.createElement('img', { src: '../final_project/images/github.png' })
+                                _react2.default.createElement('img', { src: './images/github.png' })
                             ),
                             _react2.default.createElement(
                                 'a',
                                 { href: 'https://www.linkedin.com/in/maria-zawi%C4%85zalec-974a6b116/' },
-                                _react2.default.createElement('img', { src: '../final_project/images/linkedin.png' })
+                                _react2.default.createElement('img', { src: './images/linkedin.png' })
                             )
                         )
                     )
@@ -14011,24 +14011,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
             _this4.icons = {};
 
-            _this4.icons["01d"] = "../final_project/images/png/sunny.png";
-            _this4.icons["01n"] = "../final_project/images/png/moon-1.png";
-            _this4.icons["02d"] = "../final_project/images/png/clouds-1.png";
-            _this4.icons["02n"] = "../final_project/images/png/cloudy-night.png";
-            _this4.icons["03d"] = "../final_project/images/png/clouds.png";
-            _this4.icons["03n"] = "../final_project/images/png/clouds.png";
-            _this4.icons["04d"] = "../final_project/images/png/clouds.png";
-            _this4.icons["04n"] = "../final_project/images/png/clouds.png";
-            _this4.icons["09d"] = "../final_project/images/png/summer-rain.png";
-            _this4.icons["09n"] = "../final_project/images/png/stars.png";
-            _this4.icons["10d"] = "../final_project/images/png/raining.png";
-            _this4.icons["10n"] = "../final_project/images/png/raining.png";
-            _this4.icons["11d"] = "../final_project/images/png/storm.png";
-            _this4.icons["11n"] = "../final_project/images/png/storm-2.png";
-            _this4.icons["13d"] = "../final_project/images/png/snowing.png";
-            _this4.icons["13n"] = "../final_project/images/png/snowing.png";
-            _this4.icons["50d"] = "../final_project/images/png/sunset-2.png";
-            _this4.icons["50n"] = "../final_project/images/png/moon-13.png";
+            _this4.icons["01d"] = "./images/png/sunny.png";
+            _this4.icons["01n"] = "./images/png/moon-1.png";
+            _this4.icons["02d"] = "./images/png/clouds-1.png";
+            _this4.icons["02n"] = "./images/png/cloudy-night.png";
+            _this4.icons["03d"] = "./images/png/clouds.png";
+            _this4.icons["03n"] = "./images/png/clouds.png";
+            _this4.icons["04d"] = "./images/png/clouds.png";
+            _this4.icons["04n"] = "./images/png/clouds.png";
+            _this4.icons["09d"] = "./images/png/summer-rain.png";
+            _this4.icons["09n"] = "./images/png/stars.png";
+            _this4.icons["10d"] = "./images/png/raining.png";
+            _this4.icons["10n"] = "./images/png/raining.png";
+            _this4.icons["11d"] = "./images/png/storm.png";
+            _this4.icons["11n"] = "./images/png/storm-2.png";
+            _this4.icons["13d"] = "./images/png/snowing.png";
+            _this4.icons["13n"] = "./images/png/snowing.png";
+            _this4.icons["50d"] = "./images/png/sunset-2.png";
+            _this4.icons["50n"] = "./images/png/moon-13.png";
 
             return _this4;
         }

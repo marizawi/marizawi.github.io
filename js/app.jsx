@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     <hr/>
                     <div>
                         <h3>&copy; Maria Zawiązalec</h3>
-                        <a href="https://github.com/marizawi"><img src="../final_project/images/github.png"/></a>
-                        <a href="https://www.linkedin.com/in/maria-zawi%C4%85zalec-974a6b116/"><img src="../final_project/images/linkedin.png"/></a>
+                        <a href="https://github.com/marizawi"><img src="./images/github.png"/></a>
+                        <a href="https://www.linkedin.com/in/maria-zawi%C4%85zalec-974a6b116/"><img src="./images/linkedin.png"/></a>
                     </div>
                 </footer>
                 </div>
@@ -252,24 +252,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
             this.icons = {};
 
-            this.icons["01d"] = "../final_project/images/png/sunny.png";
-            this.icons["01n"] = "../final_project/images/png/moon-1.png";
-            this.icons["02d"] = "../final_project/images/png/clouds-1.png";
-            this.icons["02n"] = "../final_project/images/png/cloudy-night.png";
-            this.icons["03d"] = "../final_project/images/png/clouds.png";
-            this.icons["03n"] = "../final_project/images/png/clouds.png";
-            this.icons["04d"] = "../final_project/images/png/clouds.png";
-            this.icons["04n"] = "../final_project/images/png/clouds.png";
-            this.icons["09d"] = "../final_project/images/png/summer-rain.png";
-            this.icons["09n"] = "../final_project/images/png/stars.png";
-            this.icons["10d"] = "../final_project/images/png/raining.png";
-            this.icons["10n"] = "../final_project/images/png/raining.png";
-            this.icons["11d"] = "../final_project/images/png/storm.png";
-            this.icons["11n"] = "../final_project/images/png/storm-2.png";
-            this.icons["13d"] = "../final_project/images/png/snowing.png";
-            this.icons["13n"] = "../final_project/images/png/snowing.png";
-            this.icons["50d"] = "../final_project/images/png/sunset-2.png";
-            this.icons["50n"] = "../final_project/images/png/moon-13.png";
+            this.icons["01d"] = "./images/png/sunny.png";
+            this.icons["01n"] = "./images/png/moon-1.png";
+            this.icons["02d"] = "./images/png/clouds-1.png";
+            this.icons["02n"] = "./images/png/cloudy-night.png";
+            this.icons["03d"] = "./images/png/clouds.png";
+            this.icons["03n"] = "./images/png/clouds.png";
+            this.icons["04d"] = "./images/png/clouds.png";
+            this.icons["04n"] = "./images/png/clouds.png";
+            this.icons["09d"] = "./images/png/summer-rain.png";
+            this.icons["09n"] = "./images/png/stars.png";
+            this.icons["10d"] = "./images/png/raining.png";
+            this.icons["10n"] = "./images/png/raining.png";
+            this.icons["11d"] = "./images/png/storm.png";
+            this.icons["11n"] = "./images/png/storm-2.png";
+            this.icons["13d"] = "./images/png/snowing.png";
+            this.icons["13n"] = "./images/png/snowing.png";
+            this.icons["50d"] = "./images/png/sunset-2.png";
+            this.icons["50n"] = "./images/png/moon-13.png";
 
         }
         render() {
