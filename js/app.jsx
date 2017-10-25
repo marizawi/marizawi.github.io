@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function(){
             super(props);
 
             this.state = {
-                citiesSea: ["Paris", "Tokyo", "Washington, D.C.", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Phnom Penh", "Havana", "Copenhagen", "Helsinki", "Reykjavik", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi"],
+                citiesSea: ["Paris", "Tokyo", "Washington, D.C.", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Phnom Penh", "Havana", "Copenhagen", "Helsinki", "Reykjavik", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi", "Santiago", "Montevideo", "Dublin", "Lisbon"],
                 citiesMount: ["Madrid", "Tokyo", "Rome", "Seoul", "Tirana", "Buenos Aires", "Canberra", "Ottawa", "Jerusalem", "Rabat", "Lima"],
-                citiesBoth: ["Paris", "Madrid", "Tokyo", "Washington, D.C.", "London", "Rome", "Tirana", "Buenos Aires", "Canberra", "Brasilia", "Phnom Penh", "Ottawa", "Havana", "Copenhagen", "Helsinki", "Berlin", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi", "Harare"],
+                citiesBoth: ["Paris", "Madrid", "Tokyo", "Washington, D.C.", "London", "Rome", "Tirana", "Buenos Aires", "Canberra", "Brasilia", "Phnom Penh", "Ottawa", "Havana", "Copenhagen", "Helsinki", "Berlin", "Jerusalem", "Jakarta", "Tarawa", "Beirut", "Kuala Lumpur", "Rabat", "Amsterdam", "Lima", "Doha", "Singapore", "Bangkok", "Hanoi", "Harare", "Santiago", "Montevideo", "Dublin", "Lisbon"],
                 city: "",
                 visibility: true,
                 weather: false,
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function(){
                             <input id="city-input" value={this.state.city} />
                                 <div className="choice">
                                     <input type="radio" value="Sea" checked={this.state.selectedRadio === 'Sea'} onChange={this.handleRadioChange} /> Sea
-                                    <input type="radio" value="Mountains" checked={this.state.selectedRadio === 'Mountains'} onChange={this.handleRadioChange} /> Mount
+                                    <input type="radio" value="Mountains" checked={this.state.selectedRadio === 'Mountains'} onChange={this.handleRadioChange} /> Mountains
                                     <input type="radio" value="Nevermind" checked={this.state.selectedRadio === 'Nevermind'} onChange={this.handleRadioChange} /> Never mind
                                 </div>
                             <input className="city-button" onClick={this.handleClick} value="Click" type="submit" />
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     <div>
                         <h3>&copy; Maria Zawiązalec</h3>
                         <a href="https://github.com/marizawi"><img src="./images/github.png"/></a>
-                        <a href="https://www.linkedin.com/in/maria-zawi%C4%85zalec-974a6b116/"><img src="./images/linkedin.png"/></a>
+                        <a href="https://www.linkedin.com/in/maria-zawiazalec/"><img src="./images/linkedin.png"/></a>
                     </div>
                 </footer>
                 </div>
