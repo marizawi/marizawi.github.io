@@ -86,7 +86,7 @@ header div hr {
 
 .about div {
     width: 80%;
-    margin: 70px 0;
+    margin: 30px 0;
 }
 
 .about div p {
@@ -118,6 +118,7 @@ header div hr {
 
     .about div {
         width: 50%;
+        margin: 70px 0;
     }
 }
 
@@ -125,6 +126,7 @@ header div hr {
 
     .about div {
         width: 40%;
+        margin: 70px 0;
     }
 }
 
