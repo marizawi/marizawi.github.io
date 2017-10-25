@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 about = <div className="about">
                     <div>
                         <h3>If you can't decide on your holiday destination - this is the place for you!</h3>
-                        <p>This simple application helps you find random place for your vacations. Additionally, it presents basic information about chosen country, it shows current weather and in case you have no idea where the country is located, the map helps you out.</p>
+                        <p>This simple application helps you find random place for your vacations. Additionally, it presents basic information about chosen country, shows current weather and in case you have no idea where the country is located, the map helps you out.</p>
                         <h2>Check it out!</h2>
                     </div>
                 </div>

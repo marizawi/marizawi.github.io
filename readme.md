@@ -1,7 +1,9 @@
 
 # Final project
 
-This is my final project made in the end of JavaScript developer: React bootcamp.
+Namby-pamby is my final project from JavaScript developer: React bootcamp.
+
+It is a simple application which helps to find random place for vacations. Moreover, it presents basic information about chosen country, including the exchange rate, shows current weather and indicates the place on the map.
 
 ## Used technologies
 
