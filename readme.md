@@ -11,7 +11,11 @@ It is a simple application which helps to find random place for vacations. Moreo
 - React;
 - jQuery; 
 - Ajax;
-- REST API;
+- 4 different REST APIs: 
+	* [country info](https://restcountries.eu/)
+	* [exchange rate](http://fixer.io/)
+	* [weather](https://openweathermap.org/api)
+	* [map](https://developers.google.com/maps/);
 
 ## Preview
 
@@ -19,4 +23,8 @@ It is a simple application which helps to find random place for vacations. Moreo
 
 <!-- Links -->
 [website]: https://marizawi.github.io/
+[countries]: https://restcountries.eu/
+[weather]: https://openweathermap.org/api
+[exchange]: http://fixer.io/
+[maps]: https://developers.google.com/maps/;
 

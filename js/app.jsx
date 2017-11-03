@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router,
+import {
+    Router,
     Route,
     Link,
     IndexLink,
@@ -8,7 +9,7 @@ import { Router,
     hashHistory
 } from 'react-router';
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     class App extends React.Component {
         constructor(props) {
@@ -95,19 +96,19 @@ document.addEventListener('DOMContentLoaded', function(){
             let weather = null;
 
             if (this.state.weather && this.state.tab === "weather") {
-                weather = <Weather city={this.state.city} />
+                weather = <Weather city={this.state.city}/>
             }
 
             let information = null;
 
             if (this.state.info && this.state.tab === "info") {
-                information = <Info city={this.state.city} defaultText={"Do you want to see exchange rate?"} />
+                information = <Info city={this.state.city} defaultText={"Do you want to see exchange rate?"}/>
             }
 
             let map = null;
 
             if (this.state.map && this.state.tab === "map") {
-                map = <Map city={this.state.city} />
+                map = <Map city={this.state.city}/>
             }
 
             let text = null;
@@ -124,7 +125,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 about = <div className="about">
                     <div>
                         <h3>If you can't decide on your holiday destination - this is the place for you!</h3>
-                        <p>This simple application helps you find random place for your vacations. Additionally, it presents basic information about chosen country, shows current weather and in case you have no idea where the country is located, the map helps you out.</p>
+                        <p>This simple application helps you find random place for your vacations. Additionally, it
+                            presents basic information about chosen country, shows current weather and in case you have
+                            no idea where the country is located, the map helps you out.</p>
                         <h2>Check it out!</h2>
                     </div>
                 </div>
@@ -133,16 +136,22 @@ document.addEventListener('DOMContentLoaded', function(){
                     <div className="click-section">
                         <div className="input-section">
                             <div>
-                            <input id="city-input" value={this.state.city} />
+                                <input id="city-input" value={this.state.city}/>
                                 <div className="choice">
-                                    <input type="radio" value="Sea" checked={this.state.selectedRadio === 'Sea'} onChange={this.handleRadioChange} /> Sea
-                                    <input type="radio" value="Mountains" checked={this.state.selectedRadio === 'Mountains'} onChange={this.handleRadioChange} /> Mountains
-                                    <input type="radio" value="Nevermind" checked={this.state.selectedRadio === 'Nevermind'} onChange={this.handleRadioChange} /> Never mind
+                                    <input type="radio" value="Sea" checked={this.state.selectedRadio === 'Sea'}
+                                           onChange={this.handleRadioChange}/> Sea
+                                    <input type="radio" value="Mountains"
+                                           checked={this.state.selectedRadio === 'Mountains'}
+                                           onChange={this.handleRadioChange}/> Mountains
+                                    <input type="radio" value="Nevermind"
+                                           checked={this.state.selectedRadio === 'Nevermind'}
+                                           onChange={this.handleRadioChange}/> Never mind
                                 </div>
-                            <input className="city-button" onClick={this.handleClick} value="Click" type="submit" />
+                                <input className="city-button" onClick={this.handleClick} value="Click" type="submit"/>
                             </div>
                             <div className="links" style={style}>
-                            <a onClick={this.handleInfo}>Info</a> <a onClick={this.handleWeather}>Weather</a> <a onClick={this.handleMap}>Map</a>
+                                <a onClick={this.handleInfo}>Info</a> <a onClick={this.handleWeather}>Weather</a> <a
+                                onClick={this.handleMap}>Map</a>
                             </div>
                         </div>
                     </div>
@@ -154,25 +163,26 @@ document.addEventListener('DOMContentLoaded', function(){
 
             return (
                 <div id="container">
-                <header>
-                    <div>
-                        <h1>NAMBY-PAMBY</h1>
-                        <h3>you are just one click away from finding your holiday destination</h3>
+                    <header>
+                        <div>
+                            <h1>NAMBY-PAMBY</h1>
+                            <h3>you are just one click away from finding your holiday destination</h3>
+                            <hr/>
+                        </div>
+                        <div>
+                            <h2 onClick={this.handleAbout}>{text}</h2>
+                        </div>
+                    </header>
+                    {about}
+                    <footer>
                         <hr/>
-                    </div>
-                    <div>
-                        <h2 onClick={this.handleAbout}>{text}</h2>
-                    </div>
-                </header>
-                {about}
-                <footer>
-                    <hr/>
-                    <div>
-                        <h3>&copy; Maria Zawiązalec</h3>
-                        <a href="https://github.com/marizawi"><img src="./images/github.png"/></a>
-                        <a href="https://www.linkedin.com/in/maria-zawiazalec/"><img src="./images/linkedin.png"/></a>
-                    </div>
-                </footer>
+                        <div>
+                            <h3>&copy; Maria Zawiązalec</h3>
+                            <a href="https://github.com/marizawi"><img src="./images/github.png"/></a>
+                            <a href="https://www.linkedin.com/in/maria-zawiazalec/"><img
+                                src="./images/linkedin.png"/></a>
+                        </div>
+                    </footer>
                 </div>
             )
         }
@@ -218,14 +228,14 @@ document.addEventListener('DOMContentLoaded', function(){
             let exch = null;
 
             if (this.state.exch) {
-                exch = <Exchange city={this.props.city} currency={this.state.currency} />
+                exch = <Exchange city={this.props.city} currency={this.state.currency}/>
             }
 
-            if(this.state.inform) {
+            if (this.state.inform) {
                 return <div className="info">
                     <div className="row">
                         <div className="country-flag">
-                            <img src={this.state.inform[0].flag} />
+                            <img src={this.state.inform[0].flag}/>
                         </div>
                         <div className="country-info">
                             <div className="country-name">
@@ -238,7 +248,8 @@ document.addEventListener('DOMContentLoaded', function(){
                             <p><strong>Currency:</strong> {this.state.inform[0].currencies[0].code}</p>
                         </div>
                     </div>
-                    <h2 onClick={this.handleExch} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>{this.state.text}</h2>
+                    <h2 onClick={this.handleExch} onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMouseLeave}>{this.state.text}</h2>
                     {exch}
                 </div>
             }
@@ -249,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function(){
             var apiInfoUrl = "https://restcountries.eu/rest/v2/capital/"
             console.log(apiInfoUrl)
             $.ajax({
-                url: apiInfoUrl+this.props.city
+                url: apiInfoUrl + this.props.city
             })
                 .done((response) => {
                     console.log(response);
@@ -258,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         inform: response,
                     })
                 })
-                .fail(function(error){
+                .fail(function (error) {
                     console.log(error);
                 })
         }
@@ -294,8 +305,9 @@ document.addEventListener('DOMContentLoaded', function(){
             this.icons["50n"] = "./images/png/moon-13.png";
 
         }
+
         render() {
-            if(this.state.data) {
+            if (this.state.data) {
                 const icon = this.icons[this.state.data.weather[0].icon];
                 if (typeof icon !== "undefined") {
                     return <div className="weather">
@@ -318,18 +330,18 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         componentDidMount() {
-            var apiWeatUrl = "https://api.openweathermap.org/data/2.5/weather?q="+this.props.city+"&units=metric&appid=1035af6c108ae667219e8190d9da9f4e"
+            var apiWeatUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + this.props.city + "&units=metric&appid=1035af6c108ae667219e8190d9da9f4e"
             $.ajax({
                 url: apiWeatUrl
             })
-             .done((response) => {
-                console.log(response);
-                this.setState({
-                    data: response,
+                .done((response) => {
+                    console.log(response);
+                    this.setState({
+                        data: response,
+                    })
                 })
-             })
-             .fail(function(error){
-                 console.log(error);
+                .fail(function (error) {
+                    console.log(error);
                 })
         }
     }
@@ -348,24 +360,24 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         componentDidMount() {
-                this.map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 6,
-                    center: {lat: -34.397, lng: 150.644}
-                });
-                var geocoder = new google.maps.Geocoder();
+            this.map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {lat: -34.397, lng: 150.644}
+            });
+            var geocoder = new google.maps.Geocoder();
 
-                var address = this.props.city;
-                geocoder.geocode({'address': address}, (results, status) => {
-                    if (status === 'OK') {
-                        this.map.setCenter(results[0].geometry.location);
-                        var marker = new google.maps.Marker({
-                            map: this.map,
-                            position: results[0].geometry.location
-                        });
-                    } else {
-                        alert('Geocode was not successful for the following reason: ' + status);
-                    }
-                });
+            var address = this.props.city;
+            geocoder.geocode({'address': address}, (results, status) => {
+                if (status === 'OK') {
+                    this.map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: this.map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
 
         }
     }
@@ -380,12 +392,13 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         render() {
-            if(this.state.curr) {
-                if (this.props.currency === this.state.curr.base){
+            if (this.state.curr) {
+                if (this.props.currency === this.state.curr.base) {
                     return <h3>The official currency in {this.props.city} is EUR</h3>
                 } else if (typeof this.state.curr.rates[this.props.currency] !== "undefined") {
                     return <div>
-                        <h2>1 {this.state.curr.base} - {this.state.curr.rates[this.props.currency]} {this.props.currency}</h2>
+                        <h2>1 {this.state.curr.base}
+                            - {this.state.curr.rates[this.props.currency]} {this.props.currency}</h2>
                     </div>
                 } else {
                     return <h3>Unfortunately no data</h3>
@@ -405,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         curr: response,
                     })
                 })
-                .fail(function(error){
+                .fail(function (error) {
                     console.log(error);
                 })
         }
@@ -413,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     ReactDOM.render(
-        <App />,
+        <App/>,
         document.getElementById('app')
-);
+    );
 });
