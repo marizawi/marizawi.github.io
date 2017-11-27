@@ -13728,7 +13728,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             _react2.default.createElement(
                                 'p',
                                 null,
-                                'This simple application helps you find random place for your vacations. Additionally, it presents basic information about chosen country, it shows current weather and in case you have no idea where the country is located, the map helps you out.'
+                                'This simple application helps you find random place for your vacations. Additionally, it presents basic information about chosen country, shows current weather and in case you have no idea where the country is located, the map helps you out.'
                             ),
                             _react2.default.createElement(
                                 'h2',
@@ -13754,11 +13754,16 @@ document.addEventListener('DOMContentLoaded', function () {
                                     _react2.default.createElement(
                                         'div',
                                         { className: 'choice' },
-                                        _react2.default.createElement('input', { type: 'radio', value: 'Sea', checked: this.state.selectedRadio === 'Sea', onChange: this.handleRadioChange }),
+                                        _react2.default.createElement('input', { type: 'radio', value: 'Sea', checked: this.state.selectedRadio === 'Sea',
+                                            onChange: this.handleRadioChange }),
                                         ' Sea',
-                                        _react2.default.createElement('input', { type: 'radio', value: 'Mountains', checked: this.state.selectedRadio === 'Mountains', onChange: this.handleRadioChange }),
+                                        _react2.default.createElement('input', { type: 'radio', value: 'Mountains',
+                                            checked: this.state.selectedRadio === 'Mountains',
+                                            onChange: this.handleRadioChange }),
                                         ' Mountains',
-                                        _react2.default.createElement('input', { type: 'radio', value: 'Nevermind', checked: this.state.selectedRadio === 'Nevermind', onChange: this.handleRadioChange }),
+                                        _react2.default.createElement('input', { type: 'radio', value: 'Nevermind',
+                                            checked: this.state.selectedRadio === 'Nevermind',
+                                            onChange: this.handleRadioChange }),
                                         ' Never mind'
                                     ),
                                     _react2.default.createElement('input', { className: 'city-button', onClick: this.handleClick, value: 'Click', type: 'submit' })
@@ -13780,7 +13785,8 @@ document.addEventListener('DOMContentLoaded', function () {
                                     ' ',
                                     _react2.default.createElement(
                                         'a',
-                                        { onClick: this.handleMap },
+                                        {
+                                            onClick: this.handleMap },
                                         'Map'
                                     )
                                 )
@@ -13844,7 +13850,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             _react2.default.createElement(
                                 'a',
                                 { href: 'https://www.linkedin.com/in/maria-zawiazalec/' },
-                                _react2.default.createElement('img', { src: './images/linkedin.png' })
+                                _react2.default.createElement('img', {
+                                    src: './images/linkedin.png' })
                             )
                         )
                     )
@@ -13988,7 +13995,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         ),
                         _react2.default.createElement(
                             'h2',
-                            { onClick: this.handleExch, onMouseEnter: this.handleMouseEnter, onMouseLeave: this.handleMouseLeave },
+                            { onClick: this.handleExch, onMouseEnter: this.handleMouseEnter,
+                                onMouseLeave: this.handleMouseLeave },
                             this.state.text
                         ),
                         exch
@@ -14218,7 +14226,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 null,
                                 '1 ',
                                 this.state.curr.base,
-                                ' - ',
+                                '- ',
                                 this.state.curr.rates[this.props.currency],
                                 ' ',
                                 this.props.currency

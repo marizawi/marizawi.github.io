@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 html {
@@ -181,9 +182,11 @@ header div hr {
     margin-top: 5px;
 }
 
-.input-section .choice input {
-    color: #EA85A6;
-}
+/*.input-section .choice input[type=text] {*/
+    /*color: #EA85A6;*/
+    /*background: rgba(255, 255, 255, 0.8);*/
+    /*font-size: 50px;*/
+/*}*/
 
 #city-input {
     padding: 10px 0;
